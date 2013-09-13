@@ -1,0 +1,17 @@
+
+name: 张露兵的博客
+url: http://zhanglubing.pw
+
+author:
+    name: 张露兵
+    email: zhanglubing@me.com
+    weibo: http://weibo.com/zhanglubing
+    github: http://github.com/colin-plus
+
+pygments: true
+markdown: rdiscount
+paginate: 16
+
+permalink: /:year/:month/:day/:title/
+
+safe: true
