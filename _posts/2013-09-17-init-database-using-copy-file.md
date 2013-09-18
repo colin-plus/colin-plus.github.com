@@ -5,7 +5,7 @@ categories:
  - Android
 tags:
   - Database
-date: 2013-09-17 12:31:33
+description: 'Android - 使用拷贝的方式初始化数据库'
 ---
 
 在开发Android应用时，会遇到发布APK时需要附带一个数据库，比如说：省市区级联数据库。这样的数据库变动非常小，从服务器上获取数据就显得没有必要，使用内置的数据库来做是个不错的主意。

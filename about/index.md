@@ -4,20 +4,23 @@ layout: page
 comments: no
 ---
 
-Hi，我是张露兵，80后。   
+Hi，我是张露兵，英文名：Colin Zhang
 
-程序猿一枚，目前从事Android系统定制、应用开发等工作。  
-热爱编程，开源爱好者，喜欢Mac/Linux，Github等。  
+程序猿一枚，2009年毕业于成都信息工程学院软件工程系。  
+目前从事Android系统定制和应用开发等工作。
 
-简单做人，简单做事。  
+喜欢编程，喜欢Mac/Linux/Github，热爱音乐和电影，  
+一个小书虫，电影迷，也是一个资深Dotaer!
+
+崇尚简单美，坚持简单做人做事的原则。
 
 ----
 
 ###联系方式：        
 
 Email: [{{ site.author.email }}](mailto:{{ site.author.email }})  
-Weibo: [@张露兵]({{ site.author.weibo }})  
-Github: [colin-plus]({{ site.author.github }})  
+Weibo: [{{ site.author.weibo }}]({{ site.author.weibo }})  
+Github: [{{ site.author.github }}]({{ site.author.github }})  
 
 ----
 
