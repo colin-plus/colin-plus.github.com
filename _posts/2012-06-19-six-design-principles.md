@@ -4,7 +4,7 @@ title: 六大设计原则
 categories:
  - 最佳实践
 tags:
-  - Design Principles
+ - 设计
 description: '六大设计原则'
 ---
 

@@ -4,7 +4,7 @@ title: OSC成都聚会 M.I.T Talk
 categories:
  - 聚会
 tags:
-  - 开源中国
+ - 开源中国
 description: 'OSC成都聚会 M.I.T Talk。'
 ---
 

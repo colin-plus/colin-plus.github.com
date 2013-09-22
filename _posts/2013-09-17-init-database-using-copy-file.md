@@ -4,7 +4,7 @@ title: Android - 使用拷贝的方式初始化数据库
 categories:
  - Android
 tags:
-  - Database
+ - 数据库
 description: 'Android - 使用拷贝的方式初始化数据库'
 ---
 
