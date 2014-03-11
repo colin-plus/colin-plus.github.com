@@ -20,10 +20,62 @@ description: 'Android - 使用拷贝的方式初始化数据库'
 
 看下面的代码实现：
 
-{% gist 6590273 DatabaseManager.java %}
+    public class DatabaseManager {
+     
+        public static final String DB_PATH = "/data/data/com.colinz.app/databases/";
+        public static final String DB_NAME = "test.db";
+        public static final int DB_VERSION = 1;
+     
+        private SQLiteDatabase database;
+     
+        private DatabaseManager(SQLiteDatabase database) {
+            this.database = database;
+        }
+     
+        public static DatabaseManager newInstance(Context context) {
+            copyDatabaseIfNeed(context);
+            SQLiteDatabase database = SQLiteDatabase.openOrCreateDatabase(DB_PATH + DB_NAME, null);
+            return new DatabaseManager(database);
+        }
+     
+        public void close() {
+            database.close();
+        }
+     
+        private static void copyDatabaseIfNeed(Context context) {
+            if (!new File(DB_PATH + DB_NAME).exists()) {
+                File f = new File(DB_PATH);
+                if (!f.exists()) {
+                    f.mkdir();
+                }
+                try {
+                    InputStream is = context.getAssets().open(DB_NAME);
+                    OutputStream os = new FileOutputStream(DB_PATH + DB_NAME);
+                    byte[] buffer = new byte[1024];
+                    int length;
+                    while ((length = is.read(buffer)) > 0) {
+                        os.write(buffer, 0, length);
+                    }
+                    os.flush();
+                    os.close();
+                    is.close();
+                } catch (IOException e) {
+                    Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
+                }
+            }
+        }
+     
+        // ----------
+     
+        public Cursor queryAllUsers() {
+            return database.rawQuery("select * from users", null);
+        }
+     
+    }
 
 需要获取数据时创建实例，调用方法即可：
 
-{% gist 6590273 Demo.java %}
+    DatabaseManager manager = DatabaseManager.newInstance(context);
+    Cursor cursor = manager.queryAllUsers();
 
 [onCreate]: http://developer.android.com/reference/android/database/sqlite/SQLiteOpenHelper.html#onCreate(android.database.sqlite.SQLiteDatabase)
