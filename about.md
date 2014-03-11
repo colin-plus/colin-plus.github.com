@@ -4,7 +4,7 @@ layout: default
 comments: no
 ---
 
-<img src="/resources/images/zhanglubing.jpg" alt="zhanglubing" style="margin:0;"/>
+<img src="/resources/images/zhanglubing.jpg" alt="zhanglubing" style="margin-bottom:12px;"/>
 
 Hi，我是张露兵，英文名：Colin Zhang
 
