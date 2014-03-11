@@ -24,14 +24,14 @@ description: 'Repo 快速入门。'
     repo init -u ssh://gerrit帐户@host:port/smaple/manifest -b master
     repo sync
 
-> 下载代码时，请替换自己的LDAP帐号
+> 下载代码时，请替换自己的帐号和网址等信息。
 
 ### 创建分支
 
 新下载的代码，没有任何分支，所以第一步就需要新建分支。
 
-> 不创建分支，就不能提交代码到Gerrit，  
-> 提交会出现 <code>"no branches ready for upload"</code>。
+> 不创建分支，就不能提交代码到Gerrit。  
+> 提交会出现 <code>"no branches ready for upload"</code>错误。
 
 创建分支有两种方式：
 
@@ -71,17 +71,18 @@ description: 'Repo 快速入门。'
 冲突一般在上传代码时，同步代码的步骤中出现，即<code>repo sync</code>时出现。  
 处理方式：
 
+    git commit -m "cool feature"
     repo sync # 在这一步出现冲突
     # 只有编辑冲突文件，自己解决冲突啦
-    git add file1 file2 file3
-    git commit -m "cool feature"
+    git add conflict-files
+    git rebase --continue
     repo upload
 
 ### 常用命令
 
 前面已经提到了诸多命令，但是都比较简单的使用，大多数命令都有参数可设置。
 
-还有几个常用的命令：
+还有几个常用查看信息的命令，非常有帮助：
 
 + <code>repo info</code> 查看工程列表，分支信息等。
 + <code>repo list</code> 查看工程列表，工程所在目录。
