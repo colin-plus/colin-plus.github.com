@@ -1,0 +1,16 @@
+---
+title: 目录
+layout: default
+---
+
+{% for cat in site.categories %}
+    <h3>{{ cat[0] | upcase }}</h3>
+    <ul>
+    {% for post in cat[1] %}
+        <li>
+            <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endfor %}
