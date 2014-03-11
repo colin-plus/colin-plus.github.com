@@ -66,16 +66,7 @@ description: '在Windows下使用repo。'
 + 生成ssh的key，添加到Gerrit
 + Git已经安装，只需安装repo
 + 使用repo下载代码
-
-具体请参考另外一篇文档"Gerrit设置向导.doc"：  
-[http://192.168.9.128:8000/svn/hiha_second/Doc/Gerrit设置向导.doc](http://192.168.9.128:8000/svn/hiha_second/Doc/Gerrit设置向导.doc)
-
-###有问题？
-
-请联系我:
-
-+ Skype：zhanglubing927
-+ 邮件：zhanglb0219@thundersoft.com
++ 提交并上传代码
 
 [1]: /uploads/2014-02-24/1.png
 [2]: /uploads/2014-02-24/2.png

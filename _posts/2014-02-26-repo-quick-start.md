@@ -21,7 +21,7 @@ description: 'Repo 快速入门。'
 
 只要环境是OK的，执行如下命令即可：
 
-    repo init -u ssh://gerrit帐户@192.168.9.142:29453/HaierApp/manifest -b master
+    repo init -u ssh://gerrit帐户@host:port/smaple/manifest -b master
     repo sync
 
 > 下载代码时，请替换自己的LDAP帐号
@@ -41,7 +41,7 @@ description: 'Repo 快速入门。'
 代码如下：
 
     repo start zhanglubing --all # 在所有的项目上创建名为“zhanglubing”的分支 
-    repo start zhanglubing HaierApp/HaierLobby/ # 只为项目“HaierApp/HaierLobby/”创建名为“zhanglubing”的分支
+    repo start zhanglubing Sample/Demo/ # 只为项目“Sample/Demo/”创建名为“zhanglubing”的分支
     repo list # 可查看所有项目列表
 
 ### 提交代码
